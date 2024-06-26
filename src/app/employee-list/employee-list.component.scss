@@ -1,0 +1,43 @@
+
+  .thead-blue {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .thead-gray {
+    background-color: #ccc; /* Adjust the color code as needed */
+    color: white; /* Text color */
+  }
+  
+  
+.container {
+  margin: 0 auto;
+  max-width: 800px; /* Optional: Set maximum width for the container */
+}
+
+.table-container {
+  margin: 0 auto; /* Auto margin will center the container */
+  max-width: 800px; /* Optional: Set maximum width for the table */
+}
+
+.table-responsive {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add padding to table cells */
+.table td,
+.table th {
+  padding: 0.5rem;
+}
+
+/* Vertically center align table cells */
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+/* Add margin to the action buttons for better spacing */
+.btn-group {
+  margin-right: 5px;
+}

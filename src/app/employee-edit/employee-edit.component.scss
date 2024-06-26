@@ -1,0 +1,45 @@
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add custom styles for form controls */
+  .form-control {
+    border-radius: 0.25rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Add styles for buttons */
+  .btn-primary {
+    border-radius: 0.25rem;
+    padding: 10px 20px;
+    font-size: 1.1em;
+  }
+  
+  /* Add styles for error messages */
+  .invalid-feedback {
+    display: block;
+    color: #dc3545;
+  }
+  
+  /* Adjust margin for form groups */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Add custom styles for headings */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  

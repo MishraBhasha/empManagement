@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="card mt-5 p-5">
+  <div class="card-header text-white d-flex justify-content-end" style="background-color: #c5b3e6">
+    <a type="text" class="text-white" routerLink="/user-form">Add Form</a>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-warning table-hover">
+        <thead>
+          <tr>
+            <th scope="col" width="50">#Sl No.</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Department</th>
+            <th scope="col">Address</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="userList?.length == 0">
+            <td colspan="7" align="center">No data available</td>
+          </tr>
+          <tr *ngFor="let data of userList; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ data.first_name }}</td>
+            <td>{{ data.last_name }}</td>
+            <td>{{ data.email }}</td>
+            <td>{{ data.phone_number }}</td>
+            <td>{{ data.date_of_birth }}</td>
+            <td>{{ data.department }}</td>
+            <td>{{ data.address }}</td>
+            <td class="d-flex justify-content-between">
+              <a class="text-warning" (click)="editStudent(data.id)">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <a class="text-danger" (click)="deleteStudent(data.id)">
+                <i class="bi bi-trash-fill"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

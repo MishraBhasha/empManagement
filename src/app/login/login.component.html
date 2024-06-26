@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5 border shadow" style="background-image: url('assets/img/loginBg.jpg');">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h2 class="text-center text-white m-5">Login</h2>
+        <div class="d-grid gap-2 col-9 mx-auto m-5">
+          <input id="email" formControlName="email" type="email" class="form-control" placeholder="Enter Email" />
+        </div>
+        <div class="d-grid gap-2 col-9 mx-auto mb-5">
+          <div class="input-group">
+            <input id="password" formControlName="password" [type]="hidePassword ? 'password' : 'text'"
+              class="form-control" placeholder="Enter Password" />
+            <button class="btn btn-secondary" type="button" (click)="togglePasswordVisibility()">
+              <i [ngClass]="hidePassword ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+            </button>
+          </div>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mb-5">
+          <button type="submit" class="btn btn-primary btn-lg" [disabled]="loginForm.invalid">Login</button><br>
+          <a type="link" class="btn btn-link" (click)="goToRegister()">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
